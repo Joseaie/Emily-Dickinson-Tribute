@@ -1,0 +1,175 @@
+/* * {
+    outline: 1px solid red;
+} */
+
+html {
+    font-size: 16px;
+    scroll-behavior: smooth;
+}
+
+ body {
+    margin: 0;
+    background-color: rgba(0, 0, 0, 0.932)
+ }
+
+ #home {
+     scroll-margin-top: 0px;
+ }
+
+header {
+    top:0;
+    width: 100%;
+    height: 130px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    background-color:  rgb(32, 32, 32);
+    z-index: 10;
+    border-top: 3px solid rgb(160, 1, 1);
+}
+
+#logo {
+    margin: 10px 0px 20px 0px;
+    padding: 0;
+    position: relative;
+    justify-self: center;
+}
+
+#logo, .title {
+    font-size: 40px;
+    font-family: 'american-scribe', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: white;
+}
+
+.nav-item, .footer {
+    font-family: 'wedding-gothic-atf',sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    text-transform: lowercase;
+    color: white;
+}
+
+.nav-item {padding: 20px;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.nav-item:hover, #tribute-link:hover {
+    color: rgb(160, 1, 1)
+}
+
+.hero-grid {
+    width: 100%;
+    height: 80vh;
+    overflow: hidden;
+}
+
+#book {grid-area: book;}
+#house {grid-area: house;}
+#letter {grid-area: letter;}
+
+.grid-tiles {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    grid-template-areas:
+     "house book"
+     "letter letter";
+    width: 100%;
+    align-items: stretch;
+    height: 100%;
+}
+
+.grid-tiles img {
+    width: 100%;
+}
+
+#main {
+    margin-top: 130px;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    min-height: 200px;
+    margin: 5%;
+    background-color: rgba(250, 250, 250, 0.103);
+}
+
+.title {
+    text-align: center;
+    padding-top: 20px;
+    margin: 0;
+}
+
+#who-start, #where-start, #who-start {
+    scroll-margin-top: 165px;
+}
+
+.img-content-container {
+    display: flex;
+    flex-direction: column;
+    padding: 0 12% 12% 12%;
+}
+
+.img-content-container img, #image {
+   max-width: 100%;
+}
+
+#img-caption, .caption, #poem {
+    color: white;
+    font-family: 'Lora', serif;
+    padding: 7% 2% 7% 2%;
+    line-height: 1.5;
+    margin: 0;
+    text-align: center;
+}
+
+footer {
+    height: 100px;
+    font-size: smaller;
+    background-color: rgb(32, 32, 32);
+    text-align: center;
+    padding-top: 40px;
+    border-bottom: 3px solid rgb(160, 1, 1);
+}
+
+@media only screen and (min-width: 980px) {
+
+    header {height: 150px;}
+
+    #logo, .title {
+        font-size: 50px;
+    }
+
+    .nav-item {
+        font-size: 24px;
+        padding: 20px 60px 20px 60px;
+    }
+
+    .hero-grid {
+        height: 70vh;
+        overflow: hidden;
+    }
+
+    #img-div {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .img-content-container img, #image {
+        max-width: auto;
+        max-height: 400px;
+     }
+     
+    .grid-tiles {
+        grid-template-areas:
+         "house book letter";
+    }
+}
